@@ -39,7 +39,13 @@ gulp.task('default', () =>
 );
 ```
 
-###Note: 
+###Notes:
+Guetzli is designed to work on high quality images (e.g. that haven't
+been already compressed with other JPEG encoders). While it will work on other
+images too, results will be poorer. You can try compressing an enclosed [sample
+high quality
+image](https://github.com/google/guetzli/releases/download/v0/bees.png).
+
 Guetzli converts PNG/JPG to JPG. When using this plugin or guetzli-bin CLI, the original filename+ext is used as the output, although the image format has changed. You have to rename the file with the correct file extension (JPG) yourself afterwards.
 
 ## API
