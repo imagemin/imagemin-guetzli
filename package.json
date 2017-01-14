@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Guetzli imagemin plugin",
   "license": "MIT",
-  "repository": "imagemin/imagemin-guetzli",
+  "repository": "bradbaris/imagemin-guetzli",
   "author": {
     "name": "Brad Baris",
     "email": "bradbaris@gmail.com",
