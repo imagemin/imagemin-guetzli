@@ -26,7 +26,8 @@ imagemin(['images/*.{png,jpg}'], 'build/images', {
 ```
 
 ## Usage (gulp-imagemin):
-```
+
+```js
 const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
 const imageminGuetzli = require('imagemin-guetzli');
