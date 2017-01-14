@@ -26,6 +26,8 @@
     "minify",
     "optimize",
     "png",
+    "jpg",
+    "photo",
     "guetzli"
   ],
   "dependencies": {
