@@ -24,7 +24,8 @@ imagemin(['images/*.{png,jpg}'], 'build/images', {
     console.log('Images optimized');
 });
 ```
-
+###Note: 
+When using this plugin or guetzli-bin CLI, the original filename+ext is used as the output, although the image format has changed. You have to rename the file with the correct file extension (JPG) yourself afterwards.
 
 ## API
 
