@@ -24,9 +24,8 @@ test('skip optimizing a non-PNG/JPG file', async t => {
 
 test('check if --quality flag works', async t => {
 	const buf1 = await fsP.readFile(path.join(__dirname, 'fixtures/bees.png'));
-	const buf2 = await fsP.readFile(path.join(__dirname, 'fixtures/bees.png'));
 	const data1 = await m({quality: 84})(buf1);
-	const data2 = await m({quality: 95})(buf2);
+	const data2 = await m({quality: 95})(buf1);
 
 	t.true(data1.length < data2.length);
 });

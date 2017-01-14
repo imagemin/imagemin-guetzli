@@ -1,4 +1,4 @@
-# imagemin-guetzli
+# imagemin-guetzli [![Build Status](https://travis-ci.org/bradbaris/imagemin-guetzli.svg?branch=master)](https://travis-ci.org/bradbaris/imagemin-guetzli) [![Build status](https://ci.appveyor.com/api/projects/status/7wxmyhxee0i8b7d9/branch/master?svg=true)](https://ci.appveyor.com/project/bradbaris/imagemin-guetzli)
 
 > [Guetzli](https://github.com/google/guetzli) imagemin plugin
 
