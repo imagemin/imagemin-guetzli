@@ -24,8 +24,22 @@ imagemin(['images/*.{png,jpg}'], 'build/images', {
     console.log('Images optimized');
 });
 ```
+
+## Usage (gulp-imagemin):
+```
+const gulp = require('gulp');
+const imagemin = require('gulp-imagemin');
+const imageminGuetzli = require('imagemin-guetzli');
+
+gulp.task('default', () =>
+    gulp.src('images/*')
+        .pipe(imagemin([imageminGuetzli()]))
+        .pipe(gulp.dest('dist/images'))
+);
+```
+
 ###Note: 
-When using this plugin or guetzli-bin CLI, the original filename+ext is used as the output, although the image format has changed. You have to rename the file with the correct file extension (JPG) yourself afterwards.
+Guetzli converts PNG/JPG to JPG. When using this plugin or guetzli-bin CLI, the original filename+ext is used as the output, although the image format has changed. You have to rename the file with the correct file extension (JPG) yourself afterwards.
 
 ## API
 
@@ -40,7 +54,7 @@ Type: `object`
 Type: `number` (0–100)<br>
 Default: `95`
 
-Set quality in units equivalent to libjpeg quality. As per guetzli function, it is not recommended to go below `84`.
+Set quality in units equivalent to libjpeg quality. As per guetzli function and purpose, it is not recommended to go below `84`.
 
 Please note that JPEG images do not support alpha channel (transparency). If the input is a PNG with an alpha channel, it will be overlaid on black background before encoding.
 
@@ -49,4 +63,4 @@ Please note that JPEG images do not support alpha channel (transparency). If the
 
 MIT © [imagemin](https://github.com/imagemin)
 
-Much original code structure from imagemin-zopfli maintainers: @kevva @sindresorhus @shinnn
+Much original code structure borrowed from imagemin-zopfli maintainers: [@kevva](https://github.com/kevva) [@sindresorhus](https://github.com/sindresorhus) [@shinnn](https://github.com/shinnn)
