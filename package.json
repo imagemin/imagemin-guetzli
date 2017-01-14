@@ -1,0 +1,45 @@
+{
+  "name": "imagemin-guetzli",
+  "version": "0.1.0",
+  "description": "Guetzli imagemin plugin",
+  "license": "MIT",
+  "repository": "imagemin/imagemin-guetzli",
+  "author": {
+    "name": "Brad Baris",
+    "email": "bradbaris@gmail.com",
+    "url": "github.com/bradbaris"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "compress",
+    "image",
+    "imageminplugin",
+    "img",
+    "minify",
+    "optimize",
+    "png",
+    "guetzli"
+  ],
+  "dependencies": {
+    "exec-buffer": "^3.0.0",
+    "guetzli": "^0.1.0",
+    "is-jpg": "^1.0.0",
+    "is-png": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "pify": "^2.3.0",
+    "xo": "*"
+  },
+  "xo": {
+    "esnext": true
+  }
+}
