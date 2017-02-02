@@ -16,16 +16,16 @@ test('optimize a PNG', async t => {
 });
 
 test('skip optimizing a non-PNG/JPG file', async t => {
-	const buf = await fsP.readFile(__filename);
-	const data = await m()(buf);
+	const buf1 = await fsP.readFile(__filename);
+	const data1 = await m()(buf1);
 
-	t.deepEqual(data, buf);
+	t.deepEqual(data1, buf1);
 });
 
 test('check if --quality flag works', async t => {
-	const buf1 = await fsP.readFile(path.join(__dirname, 'fixtures/test.png'));
-	const data1 = await m({quality: 84})(buf1);
-	const data2 = await m({quality: 95})(buf1);
+	const buf2 = await fsP.readFile(path.join(__dirname, 'fixtures/test.png'));
+	const data2 = await m({quality: 84})(buf2);
+	const data3 = await m({quality: 95})(buf2);
 
-	t.true(data1.length < data2.length);
+	t.true(data2.length < data3.length);
 });
