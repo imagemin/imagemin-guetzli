@@ -6,9 +6,13 @@ import test from 'ava';
 import m from './';
 
 const fsP = pify(fs);
+let buf;
+
+test.before(async () => {
+	buf = await fsP.readFile(path.join(__dirname, 'fixtures/test.png'));
+});
 
 test('optimize a PNG', async t => {
-	const buf = await fsP.readFile(path.join(__dirname, 'fixtures/test.png'));
 	const data = await m()(buf);
 
 	t.true(data.length < buf.length);
@@ -16,16 +20,12 @@ test('optimize a PNG', async t => {
 });
 
 test('skip optimizing a non-PNG/JPG file', async t => {
-	const buf1 = await fsP.readFile(__filename);
-	const data1 = await m()(buf1);
+	const buf = await fsP.readFile(__filename);
+	const data = await m()(buf);
 
-	t.deepEqual(data1, buf1);
+	t.deepEqual(data, buf);
 });
 
 test('check if --quality flag works', async t => {
-	const buf2 = await fsP.readFile(path.join(__dirname, 'fixtures/test.png'));
-	const data2 = await m({quality: 84})(buf2);
-	const data3 = await m({quality: 95})(buf2);
-
-	t.true(data2.length < data3.length);
+	t.notThrows(m({quality: 85})(buf));
 });

@@ -34,7 +34,8 @@
     "exec-buffer": "^3.0.0",
     "guetzli": "^0.1.0",
     "is-jpg": "^1.0.0",
-    "is-png": "^1.0.0"
+    "is-png": "^1.0.0",
+    "number-is-integer": "^1.0.1"
   },
   "devDependencies": {
     "ava": "*",
