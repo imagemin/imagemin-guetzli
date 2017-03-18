@@ -39,7 +39,8 @@ gulp.task('default', () =>
 );
 ```
 
-###Notes:
+### Notes:
+
 Guetzli is designed to work on high quality images (e.g. that haven't
 been already compressed with other JPEG encoders). While it will work on other
 images too, results will be poorer. You can try compressing an enclosed [sample
