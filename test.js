@@ -27,5 +27,5 @@ test('skip optimizing a non-PNG/JPG file', async t => {
 });
 
 test('check if --quality flag works', async t => {
-	t.notThrows(m({quality: 85})(buf));
+	await t.notThrows(m({quality: 85})(buf));
 });
