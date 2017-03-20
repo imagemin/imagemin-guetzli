@@ -9,7 +9,7 @@ const fsP = pify(fs);
 let buf;
 
 test.before(async () => {
-	buf = await fsP.readFile(path.join(__dirname, 'fixtures/test.png'));
+	buf = await fsP.readFile(path.join(__dirname, 'fixtures/test.jpg'));
 });
 
 test('optimize a PNG', async t => {
