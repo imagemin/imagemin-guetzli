@@ -1,6 +1,6 @@
 {
   "name": "imagemin-guetzli",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Guetzli imagemin plugin",
   "license": "MIT",
   "repository": "bradbaris/imagemin-guetzli",
