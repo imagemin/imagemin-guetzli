@@ -12,7 +12,7 @@ test.before(async () => {
 	buf = await fsP.readFile(path.join(__dirname, 'fixtures/test.jpg'));
 });
 
-test('optimize a PNG', async t => {
+test('optimize a JPG', async t => {
 	const data = await m()(buf);
 
 	t.true(data.length < buf.length);

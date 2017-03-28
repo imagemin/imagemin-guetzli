@@ -6,7 +6,7 @@
   "repository": "bradbaris/imagemin-guetzli",
   "author": {
     "name": "Brad Baris",
-    "email": "bradbaris@gmail.com",
+    "email": "brad@nomadspaceship.com",
     "url": "github.com/bradbaris"
   },
   "engines": {
@@ -41,8 +41,5 @@
     "ava": "*",
     "pify": "^2.3.0",
     "xo": "*"
-  },
-  "xo": {
-    "esnext": true
   }
 }

@@ -19,7 +19,7 @@ module.exports = opts => buf => {
 	const args = [];
 
 	if (isInt(opts.quality) && opts.quality >= 0 && opts.quality <= 100) {
-		args.push('-quality', opts.quality);
+		args.push('--quality', opts.quality);
 	}
 
 	args.push(execBuffer.input, execBuffer.output);
