@@ -43,11 +43,11 @@ gulp.task('default', () =>
 
 ### Notes
 
-Guetzli uses a large amount of memory. You should provide 300MB of memory per 1MPix of the input image.
+Guetzli uses a large amount of memory. You should provide **300MB of memory per 1MPix** of the input image.
 
-Guetzli uses a significant amount of CPU time. You should count on using about 1 minute of CPU per 1 MPix of input image.
+Guetzli uses a significant amount of CPU time. You should count on using about **1 minute of CPU per 1MPix** of input image.
 
-Guetzli assumes that input is in *sRGB profile* with a *gamma of 2.2*. Guetzli will ignore any color-profile metadata in the image.
+Guetzli assumes that input is in **sRGB profile** with a **gamma of 2.2**. Guetzli will ignore any color-profile metadata in the image.
 
 Guetzli is designed to work on high quality images (e.g. that haven't
 been already compressed with other JPEG encoders). While it will work on other
