@@ -1,4 +1,4 @@
-# imagemin-guetzli [![Build Status](https://travis-ci.org/bradbaris/imagemin-guetzli.svg?branch=master)](https://travis-ci.org/bradbaris/imagemin-guetzli) [![Build status](https://ci.appveyor.com/api/projects/status/7wxmyhxee0i8b7d9/branch/master?svg=true)](https://ci.appveyor.com/project/bradbaris/imagemin-guetzli)
+# imagemin-guetzli [![Build Status](https://travis-ci.org/imagemin/imagemin-guetzli.svg?branch=master)](https://travis-ci.org/imagemin/imagemin-guetzli) [![Build status](https://ci.appveyor.com/api/projects/status/7wxmyhxee0i8b7d9/branch/master?svg=true)](https://ci.appveyor.com/project/bradbaris/imagemin-guetzli)
 
 > [Guetzli](https://github.com/google/guetzli) imagemin plugin
 
@@ -78,5 +78,3 @@ Please note that JPEG images do not support alpha channel (transparency). If the
 ## License
 
 MIT © [imagemin](https://github.com/imagemin)
-
-Much original code structure borrowed from imagemin-zopfli maintainers: [@kevva](https://github.com/kevva) [@sindresorhus](https://github.com/sindresorhus) [@shinnn](https://github.com/shinnn)

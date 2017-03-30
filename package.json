@@ -3,12 +3,28 @@
   "version": "0.1.5",
   "description": "Guetzli imagemin plugin",
   "license": "MIT",
-  "repository": "bradbaris/imagemin-guetzli",
+  "repository": "imagemin/imagemin-guetzli",
   "author": {
     "name": "Brad Baris",
     "email": "brad@nomadspaceship.com",
     "url": "github.com/bradbaris"
   },
+  "maintainers": [
+    {
+      "name": "Sindre Sorhus",
+      "email": "sindresorhus@gmail.com",
+      "url": "sindresorhus.com"
+    },
+    {
+      "name": "Shinnosuke Watanabe",
+      "url": "github.com/shinnn"
+    },
+    {
+      "name": "Kevin Mårtensson",
+      "email": "kevinmartensson@gmail.com",
+      "url": "github.com/kevva"
+    }
+  ],
   "engines": {
     "node": ">=4"
   },
