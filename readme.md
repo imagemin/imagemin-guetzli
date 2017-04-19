@@ -74,6 +74,19 @@ Set quality in units equivalent to libjpeg quality. As per guetzli function and 
 
 Please note that JPEG images do not support alpha channel (transparency). If the input is a PNG with an alpha channel, it will be overlaid on black background before encoding.
 
+##### memlimit
+
+Type: `number`<br>
+Default: `6000`
+
+Memory limit in MB. Guetzli will fail if unable to stay under the limit.  
+Note: Currently, in `imagemin-guetzli`, this will fail silently as the error is not passed along.
+
+##### nomemlimit
+
+Type: `boolean`<br>
+
+Do not limit memory usage.
 
 ## License
 

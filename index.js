@@ -22,6 +22,14 @@ module.exports = opts => buf => {
 		args.push('--quality', opts.quality);
 	}
 
+	if (isInt(opts.memlimit) && opts.memlimit > 0) {
+		args.push('--memlimit', opts.memlimit);
+	}
+
+	if (opts.nomemlimit) {
+		args.push('--nomemlimit');
+	}
+
 	args.push(execBuffer.input, execBuffer.output);
 
 	return execBuffer({
