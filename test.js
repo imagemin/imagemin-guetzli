@@ -3,7 +3,7 @@ import path from 'path';
 import isJpg from 'is-jpg';
 import pify from 'pify';
 import test from 'ava';
-import m from './';
+import m from '.';
 
 const fsP = pify(fs);
 let buf;
@@ -27,5 +27,7 @@ test('skip optimizing a non-PNG/JPG file', async t => {
 });
 
 test('check if --quality flag works', async t => {
-	await t.notThrows(m({quality: 85})(buf));
+	await t.notThrowsAsync(async () => {
+		await m({quality: 85})(buf);
+	});
 });

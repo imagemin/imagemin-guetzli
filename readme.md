@@ -1,4 +1,4 @@
-# imagemin-guetzli [![Build Status](https://travis-ci.org/imagemin/imagemin-guetzli.svg?branch=master)](https://travis-ci.org/imagemin/imagemin-guetzli) [![Build status](https://ci.appveyor.com/api/projects/status/7wxmyhxee0i8b7d9/branch/master?svg=true)](https://ci.appveyor.com/project/bradbaris/imagemin-guetzli)
+# imagemin-guetzli [![Build Status](https://travis-ci.org/imagemin/imagemin-guetzli.svg?branch=master)](https://travis-ci.org/imagemin/imagemin-guetzli)
 
 > [Guetzli](https://github.com/google/guetzli) imagemin plugin
 
@@ -79,7 +79,7 @@ Please note that JPEG images do not support alpha channel (transparency). If the
 Type: `number`<br>
 Default: `6000`
 
-Memory limit in MB. Guetzli will fail if unable to stay under the limit.  
+Memory limit in MB. Guetzli will fail if unable to stay under the limit.
 Note: Currently, in `imagemin-guetzli`, this will fail silently as the error is not passed along.
 
 ##### nomemlimit

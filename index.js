@@ -36,8 +36,8 @@ module.exports = opts => buf => {
 		input: buf,
 		bin: guetzli,
 		args
-	}).catch(err => {
-		err.message = err.stderr || err.message;
-		throw err;
+	}).catch(error => {
+		error.message = error.stderr || error.message;
+		throw error;
 	});
 };
