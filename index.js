@@ -2,11 +2,10 @@
 const execBuffer = require('exec-buffer');
 const isPng = require('is-png');
 const isJpg = require('is-jpg');
-const isInt = require('number-is-integer');
 const guetzli = require('guetzli');
 
-module.exports = opts => buf => {
-	opts = Object.assign({}, opts);
+module.exports = options => buf => {
+	options = {...options};
 
 	if (!Buffer.isBuffer(buf)) {
 		return Promise.reject(new TypeError('Expected a buffer'));
@@ -18,15 +17,15 @@ module.exports = opts => buf => {
 
 	const args = [];
 
-	if (isInt(opts.quality) && opts.quality >= 0 && opts.quality <= 100) {
-		args.push('--quality', opts.quality);
+	if (Number.isInteger(options.quality) && options.quality >= 0 && options.quality <= 100) {
+		args.push('--quality', options.quality);
 	}
 
-	if (isInt(opts.memlimit) && opts.memlimit > 0) {
-		args.push('--memlimit', opts.memlimit);
+	if (Number.isInteger(options.memlimit) && options.memlimit > 0) {
+		args.push('--memlimit', options.memlimit);
 	}
 
-	if (opts.nomemlimit) {
+	if (options.nomemlimit) {
 		args.push('--nomemlimit');
 	}
 
