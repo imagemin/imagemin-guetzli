@@ -1,15 +1,15 @@
-import fs from 'fs';
-import path from 'path';
-import isJpg from 'is-jpg';
-import pify from 'pify';
-import test from 'ava';
-import m from '.';
+const {promisify} = require('util');
+const fs = require('fs');
+const path = require('path');
+const isJpg = require('is-jpg');
+const test = require('ava');
+const m = require('.');
 
-const fsP = pify(fs);
+const readFile = promisify(fs.readFile);
 let buf;
 
 test.before(async () => {
-	buf = await fsP.readFile(path.join(__dirname, 'fixtures/test.jpg'));
+	buf = await readFile(path.join(__dirname, 'fixtures/test.jpg'));
 });
 
 test('optimize a JPG', async t => {
@@ -20,7 +20,7 @@ test('optimize a JPG', async t => {
 });
 
 test('skip optimizing a non-PNG/JPG file', async t => {
-	const buf = await fsP.readFile(__filename);
+	const buf = await readFile(__filename);
 	const data = await m()(buf);
 
 	t.deepEqual(data, buf);
