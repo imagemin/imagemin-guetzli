@@ -18,13 +18,16 @@ $ npm install --save imagemin-guetzli
 const imagemin = require('imagemin');
 const imageminGuetzli = require('imagemin-guetzli');
 
-imagemin(['images/*.{png,jpg}'], 'build/images', {
-    use: [
-        imageminGuetzli({quality: 95})
-    ]
-}).then(() => {
-    console.log('Images optimized');
-});
+(async () => {
+	await imagemin(['images/*.jpg'], {
+		destination: 'build/images',
+		plugins: [
+			imageminGuetzli({quality: 95})
+		]
+	});
+
+	console.log('Images optimized');
+})();
 ```
 
 ## Usage (gulp-imagemin)
