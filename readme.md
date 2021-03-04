@@ -1,4 +1,4 @@
-# imagemin-guetzli [![Build Status](https://travis-ci.org/imagemin/imagemin-guetzli.svg?branch=master)](https://travis-ci.org/imagemin/imagemin-guetzli)
+# imagemin-guetzli ![GitHub Actions Status](https://github.com/imagemin/imagemin-guetzli/workflows/test/badge.svg?branch=master)
 
 > [Guetzli](https://github.com/google/guetzli) imagemin plugin
 
